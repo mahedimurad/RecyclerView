@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_radius_corner_3"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_itemImage"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iphoneg"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_itemHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Apple iPhone 12"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_itemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Equipped with impressive features and decent specifications"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_itemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="BDT 71,000.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_BuyNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUY NOW"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_radius_corner_2"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_AddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD TO CART"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_radius_corner"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
