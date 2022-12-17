@@ -2,15 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_corner_3"
+    android:layout_margin="5dp"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_radius_corner_3"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
@@ -22,7 +22,7 @@
             android:id="@+id/iv_itemImage"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/iphoneg"
+            android:src="@drawable/iphone_12g"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,6 +46,7 @@
                 android:layout_height="wrap_content"
                 tools:text="Equipped with impressive features and decent specifications"
                 android:layout_marginTop="5dp"
+                android:textSize="12sp"
                 />
 
             <TextView
@@ -64,6 +65,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:weightSum="2"
+                android:layout_marginRight="15dp"
                 >
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button_BuyNow"
@@ -71,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:text="BUY NOW"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:layout_marginRight="3dp"
                     android:textColor="@color/white"
@@ -83,6 +86,7 @@
                     android:layout_height="wrap_content"
                     android:text="ADD TO CART"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_weight="1"
                     android:layout_marginLeft="3dp"
                     android:textColor="@color/white"

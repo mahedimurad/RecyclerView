@@ -26,31 +26,35 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         itemImage = arrayOf(
-                    R.drawable.iphoneg,
-                    R.drawable.iphoner,
-                    R.drawable.iphone_12_pro_max,
-                    R.drawable.iphone_12
+                    R.drawable.iphone_12g,
+                    R.drawable.iphone_13r,
+                    R.drawable.iphone_12_pro,
+                    R.drawable.iphone_12p,
+                    R.drawable.ipone_13
         )
 
         itemHeader = arrayOf(
                     "Apple iPhone 12",
                     "Apple iPhone 13",
                     "Apple iPhone 12 Pro Max",
-                    "Apple iPhone 12 Pro"
+                    "Apple iPhone 12 Pro",
+                    "iPhone 14 Pro"
         )
 
         itemDescription = arrayOf(
-                        "Equipped with impressive features and decent specifications",
-                        "Equipped with impressive features and decent specifications",
-                        "Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB specifications",
-                        "Memory, Card slot ; Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB"
+                        "Equipped with impressive features and decent specifications Internal, 128GB 6GB RAM, 256GB 6GB RAM,",
+                        "Equipped with impressive features and decent specifications Internal, 128GB 6GB RAM, 256GB 6GB RAM,",
+                        "Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB specifications 6GB RAM, 256GB 6GB RAM,",
+                        "Memory, Card slot ; Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB 6GB RAM, 256GB 6GB RAM,",
+                        "iPhone 14 Pro. Introducing Dynamic Island. Vital new safety features are designed 6GB RAM, 256GB 6GB RAM"
         )
 
         itemPrice = arrayOf(
                     "BDT 71,000.00",
                     "BDT 75,000.00",
                     "BDT 93,500.00",
-                    "BDT 79,500.00"
+                    "BDT 79,500.00",
+                    "BDT 98,500.00"
         )
 
         newRecyclerView = findViewById(R.id.rv_ecomView)
