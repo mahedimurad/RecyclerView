@@ -10,12 +10,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="140dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
         >
 
         <ImageView
@@ -38,6 +40,8 @@
                 tools:text="Apple iPhone 12"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
                 />
 
             <TextView
@@ -47,6 +51,9 @@
                 tools:text="Equipped with impressive features and decent specifications"
                 android:layout_marginTop="5dp"
                 android:textSize="12sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
                 />
 
             <TextView
@@ -58,6 +65,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/teal_200"
                 android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
                 />
 
             <LinearLayout
@@ -72,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BUY NOW"
+                    android:textSize="12sp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"
@@ -85,6 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ADD TO CART"
+                    android:textSize="12sp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="8dp"
                     android:layout_weight="1"

@@ -42,11 +42,11 @@ class MainActivity : AppCompatActivity() {
         )
 
         itemDescription = arrayOf(
-                        "Equipped with impressive features and decent specifications Internal, 128GB 6GB RAM, 256GB 6GB RAM,",
-                        "Equipped with impressive features and decent specifications Internal, 128GB 6GB RAM, 256GB 6GB RAM,",
-                        "Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB specifications 6GB RAM, 256GB 6GB RAM,",
-                        "Memory, Card slot ; Internal, 128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB 6GB RAM, 256GB 6GB RAM,",
-                        "iPhone 14 Pro. Introducing Dynamic Island. Vital new safety features are designed 6GB RAM, 256GB 6GB RAM"
+                        getString(R.string.dis_1),
+                        getString(R.string.dis_2),
+                        getString(R.string.dis_3),
+                        getString(R.string.dis_4),
+                        getString(R.string.dis_5)
         )
 
         itemPrice = arrayOf(
