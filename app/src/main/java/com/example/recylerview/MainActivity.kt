@@ -1,25 +1,20 @@
 package com.example.recylerview
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.voice.VoiceInteractionSession.ActivityId
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_ecom.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ecom>
+    private lateinit var ecomAdapter: ecomAdapter
     lateinit var itemImage: Array<Int>
     lateinit var itemHeader: Array<String>
     lateinit var itemDescription: Array<String>
     lateinit var itemPrice: Array<String>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +68,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         newRecyclerView.adapter = ecomAdapter(newArrayList)
+
+        ecomAdapter.onItemClick = {
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra("mm", it)
+            startActivity(intent)
+        }
 
     }
 }

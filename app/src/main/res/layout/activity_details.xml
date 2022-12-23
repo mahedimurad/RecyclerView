@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DetailsActivity"
+    android:layout_margin="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:src="@drawable/iphone_12g"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_itemHeader2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#E0F8F6"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="Apple iPhone 12" />
+
+    <TextView
+        android:id="@+id/tv_itemDescription2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Equipped with impressive features and decent specifications"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:lineSpacingExtra="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemHeader2"
+        />
+
+    <TextView
+        android:id="@+id/tv_itemPrice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="BDT 71,000.00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_200"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemDescription2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_itemPrice2"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_BuyNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius_corner_2"
+            android:text="BUY NOW"
+            android:textColor="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_AddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD TO CART"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_radius_corner"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

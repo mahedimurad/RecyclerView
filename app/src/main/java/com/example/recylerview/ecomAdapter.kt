@@ -1,5 +1,6 @@
 package com.example.recylerview
 
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +12,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import kotlinx.android.synthetic.main.item_ecom.view.*
 
-class ecomAdapter(val ecomView:ArrayList<ecom>) : RecyclerView.Adapter<ecomAdapter.ecomViewHolder>() {
+class ecomAdapter(val ecomView:ArrayList<ecom>)
+    : RecyclerView.Adapter<ecomAdapter.ecomViewHolder>() {
 
+    var onItemClick : ((ecom) -> Unit)? = null
 
     class ecomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val iv_itemImage = itemView.findViewById<ImageView>(R.id.iv_itemImage)
@@ -34,6 +37,9 @@ class ecomAdapter(val ecomView:ArrayList<ecom>) : RecyclerView.Adapter<ecomAdapt
         holder.tv_itemDescription.text = currentItem.description
         holder.tv_itemPrice.text = currentItem.price
 
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(currentItem)
+        }
     }
 
     override fun getItemCount(): Int {
