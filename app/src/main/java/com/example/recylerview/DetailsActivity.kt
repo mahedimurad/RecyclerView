@@ -10,7 +10,7 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val mm = intent.getParcelableExtra<ecom>("mm")
+        val mm = intent.getParcelableExtra<Ecom>("mm")
         if (mm !=null){
             val imageView2 = findViewById<ImageView>(R.id.imageView2)
             val tv_itemHeader2 = findViewById<TextView>(R.id.tv_itemHeader2)

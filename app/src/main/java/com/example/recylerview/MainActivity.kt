@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
-    private lateinit var newArrayList: ArrayList<ecom>
+    private lateinit var newArrayList: ArrayList<Ecom>
     private lateinit var ecomAdapter: ecomAdapter
     lateinit var itemImage: Array<Int>
     lateinit var itemHeader: Array<String>
@@ -56,20 +56,18 @@ class MainActivity : AppCompatActivity() {
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<ecom>()
+        newArrayList = arrayListOf<Ecom>()
         getUserdata()
 
     }
 
     private fun getUserdata() {
         for (i in itemImage.indices){
-            val Ecom = ecom(itemImage[i],itemHeader[i],itemDescription[i],itemPrice[i])
+            val Ecom = Ecom(itemImage[i],itemHeader[i],itemDescription[i],itemPrice[i])
             newArrayList.add(Ecom)
         }
 
-        newRecyclerView.adapter = ecomAdapter(newArrayList)
-
-        ecomAdapter.onItemClick = {
+        newRecyclerView.adapter = ecomAdapter(newArrayList){
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("mm", it)
             startActivity(intent)
